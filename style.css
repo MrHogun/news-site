@@ -1,0 +1,75 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.header-menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: black;
+  box-shadow: 0px 5px 10px -px rgba(0, 0, 0, 1);
+}
+
+.navbar-logo h1 {
+  font-family: 'Raleway', sans-serif;
+  font-size: 30px;
+  color: white;
+  margin-left: 20px;
+}
+
+.navbar-menu,
+.search-bar {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-menu li {
+  margin-right: 25px;
+  list-style: none;
+}
+
+.navbar-menu a {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 20px;
+  color: rgb(209, 209, 209);
+  text-decoration: none;
+}
+
+.navbar-menu a:not(.active):hover {
+  color: rgb(255, 255, 255);
+}
+
+a.active {
+  background-color: white;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  padding: 6px;
+  border-radius: 3px;
+}
+
+.search-bar {
+  margin-right: 25px;
+}
+
+.search {
+  margin-right: 0px;
+  padding: 5px;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 1000;
+  color: black;
+  font-size: 15px;
+  border: none;
+  outline: none;
+}
+
+button.search-button {
+  margin: 0;
+  padding: 1px;
+  background-color: #ffffff;
+  border: none;
+}
+
+.search-icon {
+  width: 22px;
+}
