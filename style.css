@@ -30,6 +30,9 @@
 }
 
 .navbar-menu li {
+  padding: 5px;
+  border-left: 1px solid white;
+  border-right: 1px solid white;
   margin-right: 15px;
   list-style: none;
 }
@@ -107,7 +110,7 @@ main {
   margin-bottom: 10px;
 }
 
-/*картки з новинами */
+/* картки з новинами */
 .cards-container {
   display: flex;
   justify-content: space-between;
@@ -179,7 +182,7 @@ footer nav a:hover {
   justify-content: center;
 }
 
-graphiclogo {
+.graphiclogo {
   padding: 5px;
   max-width: 100%;
   box-sizing: border-box;
@@ -193,4 +196,92 @@ graphiclogo {
 
 .authors {
   color: white;
+}
+
+/* cторінка реєстрації */
+
+.reg-page {
+  margin: 0;
+  padding: 0;
+  background-color: white;
+}
+
+.reg-main-container {
+  box-sizing: border-box;
+  width: 300px;
+  height: 253px;
+  background: #fff;
+  border-radius: 10px;
+  margin: 5.5% auto;
+  border: 2px solid #000;
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  font-family: 'Roboto Mono', monospace;
+  margin: 0;
+  background-color: #000000;
+  border-radius: 5px 5px 0 0;
+  color: #fff;
+  font-size: 14px;
+  padding: 20px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.reg-form {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.log {
+  text-align: center;
+  justify-content: center;
+  border: 1px solid #dcdcdc;
+  padding: 4% 4%;
+  width: 260px;
+  border-radius: 5px 5px 0 0;
+}
+
+.pass {
+  text-align: center;
+  justify-content: center;
+  border: 1px solid #dcdcdc;
+  padding: 4% 4%;
+  width: 260px;
+  border-radius: 0px 0px 5px 5px;
+}
+
+.reg-bottom {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.reg-btn {
+  background-color: #000000;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  width: 100%;
+  border-radius: 0 0 5px 5px;
+}
+
+.reg-btn input {
+  font-family: 'Roboto Mono', monospace;
+  background: none;
+  border: none;
+  color: inherit;
+  font-size: inherit;
+  cursor: inherit;
+  padding: 0;
+}
+
+.reg-btn:hover {
+  background-color: #333333;
 }
