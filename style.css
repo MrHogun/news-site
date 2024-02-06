@@ -6,12 +6,7 @@
   font-family: 'Courier New', Courier, monospace;
 }
 
-.flex {
-  display: flex;
-  align-items: center;
-}
-
-/* верхній навбар */
+/* верхній нав-бар */
 .header-menu {
   display: flex;
   align-items: center;
@@ -23,6 +18,7 @@
 
 .header-logo {
   width: 80%;
+  min-width: 25px;
   display: flex;
   padding: 0;
   margin-right: 20px;
@@ -58,20 +54,38 @@ a.active {
     'Lucida Sans', Arial, sans-serif;
 }
 
-.search-container {
+/*пошукова строка, кнопка логіна */
+.search-login-container {
   display: flex;
   align-items: center;
+  margin-left: auto;
+  flex: 0 0 20%;
+}
+
+.search-container {
+  margin-right: 0;
+  display: flex;
 }
 
 .search-input {
   padding: 8px;
   border: 1px solid #ccc;
   border-radius: 4px;
-  margin-right: 10px;
+  margin-right: 45px;
   font-size: 16px;
   outline: none;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
     'Lucida Sans', Arial, sans-serif;
+}
+
+.login-container {
+  margin-right: 10px;
+  width: 100%;
+}
+
+.login-icon {
+  max-width: 50px;
+  min-width: 25px;
 }
 
 /* головне тіло, стилі карток з новинами */
@@ -81,12 +95,26 @@ main {
   padding-block: 20px;
 }
 
+.title-container {
+  margin-top: 20px;
+  border-bottom: 0.15rem solid;
+}
+
+.page-header {
+  font-size: 36px;
+  color: #333;
+  font-family: 'Roboto Mono', monospace;
+  margin-bottom: 10px;
+}
+
+/*картки з новинами */
 .cards-container {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 20px;
   align-items: start;
+  padding-top: 2rem;
 }
 
 .card {
@@ -132,13 +160,12 @@ footer {
 
 footer a {
   color: white;
-  margin-left: 10;
+  margin: 10;
   text-decoration: none;
 }
 
 .footer-navbar li {
   display: inline-block;
-  margin-right: 2%;
 }
 
 footer nav a:hover {
@@ -147,6 +174,7 @@ footer nav a:hover {
 
 .logo {
   width: 100%;
+
   display: flex;
   justify-content: center;
 }

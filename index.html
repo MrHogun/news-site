@@ -4,22 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>News Main</title>
-    <link rel="stylesheet" type="text/css" href="style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="stylesheet" type="text/css" href="/style.css" />
   </head>
   <body>
     <header>
       <div class="header-menu">
         <div>
-          <a href="index.html"
+          <a href="/index.html"
             ><img
               class="header-logo"
-              src="img's/white-theme/web-news-logo(white).png"
+              src="/img's/white-theme/web-news-logo(white).png"
           /></a>
         </div>
         <nav class="navbar-menu">
@@ -28,17 +22,30 @@
           <li><a href="/pages/ukraine-news.html">Новини України</a></li>
           <li><a href="/pages/sport-news.html">Спортивні новини</a></li>
         </nav>
-        <div class="search-container">
-          <input
-            type="text"
-            placeholder="Пошук новини..."
-            class="search-input"
-          />
+        <div class="search-login-container">
+          <div class="search-container">
+            <input
+              type="text"
+              placeholder="Пошук новини..."
+              class="search-input"
+            />
+          </div>
+          <div class="login-container">
+            <a href="login.html" target="_blank" href="#">
+              <img
+                class="login-icon"
+                src="/img's/white-theme/login-icon(white).png"
+                alt="login-icon"
+              />
+            </a>
+          </div>
         </div>
-        <div class="loggin-btn"></div>
       </div>
     </header>
     <main>
+      <div class="title-container">
+        <h1 class="page-header">Головна сторінка</h1>
+      </div>
       <div class="cards-container container flex">
         <div class="card">
           <div class="card-header">
@@ -154,13 +161,13 @@
       <nav class="footer-navbar">
         <li><a href="/index.html">Головна</a></li>
         <li><a href="#">Логін</a></li>
-        <li><a href="#">Про нас</a></li>
+        <li><a href="/pages/about.html">Про нас</a></li>
       </nav>
       <div class="logo">
-        <a href="index.html"
+        <a href="/index.html"
           ><img
             class="footer-logo"
-            src="\img's/white-theme/web-news-logo(white).png"
+            src="/img's/white-theme/web-news-logo(white).png"
         /></a>
       </div>
       <div class="social">

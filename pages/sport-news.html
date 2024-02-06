@@ -5,30 +5,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>News Main</title>
     <link rel="stylesheet" type="text/css" href="/style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap"
-      rel="stylesheet"
-    />
   </head>
   <body>
     <header>
       <div class="header-menu">
-        <div class="navbar-logo">
-          <h1>Web News</h1>
+        <div>
+          <a href="/index.html"
+            ><img
+              class="header-logo"
+              src="/img's/white-theme/web-news-logo(white).png"
+          /></a>
         </div>
-        <div class="navbar-menu">
+        <nav class="navbar-menu">
           <li><a href="/index.html">Головна</a></li>
-          <li><a href="/pages/world-news.html">Новини світу</a></li>
+          <li>
+            <a href="/pages/world-news.html">Новини світу</a>
+          </li>
           <li><a href="/pages/ukraine-news.html">Новини України</a></li>
           <li>
             <a class="active" href="/pages/sport-news.html">Спортивні новини</a>
           </li>
+        </nav>
+        <div class="search-login-container">
+          <div class="search-container">
+            <input
+              type="text"
+              placeholder="Пошук новини..."
+              class="search-input"
+            />
+          </div>
+          <div class="login-container">
+            <a href="login.html" target="_blank" href="#">
+              <img
+                class="login-icon"
+                src="/img's/white-theme/login-icon(white).png"
+                alt="login-icon"
+              />
+            </a>
+          </div>
         </div>
       </div>
     </header>
     <main>
+      <div class="title-container">
+        <h1 class="page-header">Новини спорту</h1>
+      </div>
       <div class="cards-container container flex">
         <div class="card">
           <div class="card-header">
@@ -140,5 +161,30 @@
         </div>
       </div>
     </main>
+    <footer>
+      <nav class="footer-navbar">
+        <li><a href="/index.html">Головна</a></li>
+        <li><a href="#">Логін</a></li>
+        <li><a href="/pages/about.html">Про нас</a></li>
+      </nav>
+      <div class="logo">
+        <a href="/index.html"
+          ><img
+            class="footer-logo"
+            src="/img's/white-theme/web-news-logo(white).png"
+        /></a>
+      </div>
+      <div class="social">
+        <a href="https://github.com/MrHogun/news-site.git" target="_blank"
+          ><img
+            src="/img's/white-theme/github-icon(white).png"
+            alt="github-icon"
+        /></a>
+        <a href="https://t.me/mrhogun" target="_blank"
+          ><img src="/img's/white-theme/telegram-icon(white).png"
+        /></a>
+      </div>
+      <p class="authors">Savchenko, Halkevych 2024y.</p>
+    </footer>
   </body>
 </html>
