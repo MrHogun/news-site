@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ua">
+<html lang="UA">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -13,20 +13,18 @@
           <a href="/index.html"
             ><img
               class="header-logo"
-              src="/img's/white-theme/web-news-logo(white).png"
+              src="/img's/dark-theme/web-news-logo(white).png"
           /></a>
         </div>
         <nav class="navbar-menu">
           <li><a href="/index.html">Головна</a></li>
-          <li>
-            <a href="/pages/world-news.html">Новини світу</a>
-          </li>
+          <li><a href="/pages/world-news.html">Новини світу</a></li>
           <li><a href="/pages/ukraine-news.html">Новини України</a></li>
           <li>
             <a class="active" href="/pages/sport-news.html">Спортивні новини</a>
           </li>
         </nav>
-        <div class="search-login-container">
+        <div class="search-login-theme-container">
           <div class="search-container">
             <input
               type="search"
@@ -37,11 +35,16 @@
           <div class="login-container">
             <a target="_blank" href="/pages/login.html">
               <img
-                class="login-icon"
-                src="/img's/white-theme/login-icon(white).png"
+                class="icon"
+                src="/img's/dark-theme/login-icon(white).png"
                 alt="login-icon"
               />
             </a>
+          </div>
+          <div class="theme-toggle">
+            <button id="themeToggle" class="theme-toggle">
+              <img class="icon" src="/img's/dark-theme/theme-icon(white).png" />
+            </button>
           </div>
         </div>
       </div>
@@ -164,27 +167,28 @@
     <footer>
       <nav class="footer-navbar">
         <li><a href="/index.html">Головна</a></li>
-        <li><a href="#">Логін</a></li>
+        <li><a href="/pages/login.html">Логін</a></li>
         <li><a href="/pages/about.html">Про нас</a></li>
       </nav>
       <div class="logo">
         <a href="/index.html"
           ><img
             class="footer-logo"
-            src="/img's/white-theme/web-news-logo(white).png"
+            src="/img's/dark-theme/web-news-logo(white).png"
         /></a>
       </div>
       <div class="social">
         <a href="https://github.com/MrHogun/news-site.git" target="_blank"
           ><img
-            src="/img's/white-theme/github-icon(white).png"
+            src="/img's/dark-theme/github-icon(white).png"
             alt="github-icon"
         /></a>
         <a href="https://t.me/mrhogun" target="_blank"
-          ><img src="/img's/white-theme/telegram-icon(white).png"
+          ><img src="/img's/dark-theme/telegram-icon(white).png"
         /></a>
       </div>
       <p class="authors">Savchenko, Halkevych 2024y.</p>
     </footer>
+    <script src="/index.js"></script>
   </body>
 </html>

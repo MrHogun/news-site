@@ -1,3 +1,25 @@
+/*змінні для зміни тем */
+:root {
+  --main: rgb(13, 13, 13);
+  --main-back: white;
+  --header-text: rgb(196, 196, 196);
+  --main-active: #202020;
+  --main-card-hover: rgb(54, 54, 54);
+  --log-back: rgb(43, 43, 43);
+  color-scheme: dark;
+}
+
+.light {
+  --main: white;
+  --main-back: rgb(0, 0, 0);
+  --main-active: #f0f0f0;
+  --header-text: rgb(23, 23, 23);
+  --card-back: rgb(222, 222, 222);
+  --main-card-hover: #ebebeb;
+  --log-back: rgb(233, 233, 233);
+  color-scheme: light;
+}
+
 /* сброс базових стилів */
 * {
   margin: 0;
@@ -12,8 +34,8 @@
   align-items: center;
   justify-content: space-between;
   padding: 10px;
-  background-color: black;
-  box-shadow: 0px 5px 10px -px rgba(0, 0, 0, 1);
+  background-color: var(--main);
+  box-shadow: 0px 5px 10px -px var(--main);
 }
 
 .header-logo {
@@ -31,31 +53,31 @@
 
 .navbar-menu li {
   padding: 5px;
-  border-left: 1px solid white;
-  border-right: 1px solid white;
+  border-left: 1px solid var(--main-back);
+  border-right: 1px solid var(--main-back);
   margin-right: 15px;
   list-style: none;
 }
 
 .navbar-menu a {
   font-size: 20px;
-  color: rgb(209, 209, 209);
+  color: var(--card-back);
   text-decoration: none;
 }
 
 .navbar-menu a:not(.active) {
-  color: rgb(213, 213, 213);
+  color: var(--header-text);
   transition: color 0.3s ease;
 }
 
 .navbar-menu a:not(.active):hover {
-  color: rgb(255, 255, 255);
+  color: var(--main-back);
 }
 
 a.active {
   border-left: 0px;
-  background-color: white;
-  color: rgb(0, 0, 0);
+  background-color: var(--main-back);
+  color: var(--main);
   font-weight: bold;
   padding: 6px;
   border-radius: 3px;
@@ -64,7 +86,10 @@ a.active {
 }
 
 /*пошукова строка, кнопка логіна */
-.search-login-container {
+.theme-container {
+  margin-left: 30%;
+}
+.search-login-theme-container {
   display: flex;
   align-items: center;
   margin-left: auto;
@@ -78,7 +103,7 @@ a.active {
 
 .search-input {
   padding: 8px;
-  border: 1px solid #ccc;
+  border: 1px solid var(--main-active);
   border-radius: 4px;
   margin-right: 45px;
   font-size: 16px;
@@ -92,7 +117,7 @@ a.active {
   width: 100%;
 }
 
-.login-icon {
+.icon {
   max-width: 50px;
   min-width: 25px;
 }
@@ -105,7 +130,23 @@ a.active {
   transform: scale(1.2);
 }
 
+.theme-toggle {
+  margin-left: 5%;
+  margin-right: 15px;
+  border: 0;
+  background-color: var(--main);
+}
+
+.theme-toggle button img {
+  transition: transform 0.3s ease-in-out;
+}
+
+.theme-toggle button img:hover {
+  transform: scale(1.2);
+}
+
 /* головне тіло, стилі карток з новинами */
+
 main {
   margin-left: 40px;
   margin-right: 40px;
@@ -119,7 +160,6 @@ main {
 
 .page-header {
   font-size: 36px;
-  color: #333;
   font-family: 'Roboto Mono', monospace;
   margin-bottom: 10px;
 }
@@ -137,17 +177,17 @@ main {
 .card {
   flex: 1 0 calc(33.333% - 20px);
   min-height: 400px;
-  box-shadow: 0 0 4px #000000;
+  box-shadow: 0 0 4px var(--main);
   border-radius: 4px;
   cursor: pointer;
-  background-color: #e6e6e6;
+  background-color: var(--main-active);
   overflow: hidden;
   transition: all 0.3s ease;
 }
 
 .card:hover {
-  box-shadow: 1px 1px 8px #e8e8e8;
-  background-color: #fff;
+  box-shadow: 1px 1px 8px var(--main-active);
+  background-color: var(--main-card-hover);
   transform: translateY(-2px);
 }
 
@@ -169,14 +209,14 @@ main {
 footer {
   width: 100%;
   height: auto;
-  background-color: #000000;
+  background-color: var(--main);
   margin: 0 auto;
   text-align: center;
   padding: 20px;
 }
 
 footer a {
-  color: white;
+  color: var(--main-back);
   margin: 10;
   text-decoration: none;
 }
@@ -186,7 +226,7 @@ footer a {
 }
 
 footer nav a:hover {
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid var(--main-back);
 }
 
 .logo {
@@ -217,7 +257,7 @@ footer nav a:hover {
 }
 
 .authors {
-  color: white;
+  color: var(--main-back);
 }
 
 /* cторінка реєстрації */
@@ -225,23 +265,16 @@ footer nav a:hover {
 .reg-page {
   margin: 0;
   padding: 0;
-  background: rgb(214, 214, 214);
-  background: linear-gradient(
-    180deg,
-    rgba(214, 214, 214, 1) 0%,
-    rgba(224, 224, 224, 1) 50%,
-    rgba(255, 255, 255, 1) 100%
-  );
 }
 
 .reg-main-container {
   box-sizing: border-box;
   width: 300px;
   height: 253px;
-  background: #fff;
-  border-radius: 10px;
+  background: var(--log-back);
+  border-radius: 5px;
   margin: 5.5% auto;
-  border: 2px solid #000;
+  border: 1px solid var(--main-back);
   display: flex;
   flex-direction: column;
 }
@@ -249,9 +282,9 @@ footer nav a:hover {
 .title {
   font-family: 'Roboto Mono', monospace;
   margin: 0;
-  background-color: #000000;
+  background-color: var(--main);
   border-radius: 5px 5px 0 0;
-  color: #fff;
+  color: var(--main-back);
   font-size: 14px;
   padding: 20px;
   text-align: center;
@@ -269,7 +302,7 @@ footer nav a:hover {
 .log {
   text-align: center;
   justify-content: center;
-  border: 1px solid #dcdcdc;
+  border: 1px solid var(--main-active);
   padding: 4% 4%;
   width: 260px;
   border-radius: 5px 5px 0 0;
@@ -278,7 +311,7 @@ footer nav a:hover {
 .pass {
   text-align: center;
   justify-content: center;
-  border: 1px solid #dcdcdc;
+  border: 1px solid var(--main-active);
   padding: 4% 4%;
   width: 260px;
   border-radius: 0px 0px 5px 5px;
@@ -289,8 +322,8 @@ footer nav a:hover {
 }
 
 .reg-btn {
-  background-color: #000000;
-  color: #fff;
+  background-color: var(--main);
+  color: var(--main-back);
   border: none;
   padding: 10px 20px;
   cursor: pointer;
@@ -310,11 +343,12 @@ footer nav a:hover {
 }
 
 .reg-btn:hover {
-  background-color: #333333;
+  background-color: var(--main-card-hover);
 }
 
 /* Cтилі сторінок */
 .text-container {
   padding-top: 3%;
   padding-bottom: 3%;
+  text-align: justify;
 }
