@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="UA">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Articles</title>
+    <link rel="stylesheet" type="text/css" href="/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header-menu">
+        <div>
+          <a href="/index.html"
+            ><img
+              class="header-logo"
+              src="/img's/dark-theme/web-news-logo(white).png"
+          /></a>
+        </div>
+        <nav class="navbar-menu">
+          <li><a href="/index.html">Головна</a></li>
+          <li><a href="/pages/world-news.html">Новини світу</a></li>
+          <li><a href="/pages/ukraine-news.html">Новини України</a></li>
+          <li>
+            <a class="active" href="/pages/article.html">Статті</a>
+          </li>
+        </nav>
+        <div class="search-login-theme-container">
+          <div class="search-container">
+            <input
+              type="search"
+              placeholder="Пошук новини..."
+              class="search-input"
+            />
+          </div>
+          <div class="login-container">
+            <a target="_blank" href="/pages/login.html">
+              <img
+                class="icon"
+                src="/img's/dark-theme/login-icon(white).png"
+                alt="login-icon"
+              />
+            </a>
+          </div>
+          <div class="theme-toggle">
+            <button id="themeToggle" class="theme-toggle">
+              <img class="icon" src="/img's/dark-theme/theme-icon(white).png" />
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="title-container">
+        <h1 class="page-header">Статі</h1>
+        <a class="create-btn" href="/pages/create.html">Створити статтю</a>
+      </div>
+      <!--
+      <div class="no-articles-message">
+        <p>На жаль, статей зараз нема!</p>
+      </div>
+      -->
+
+      <div class="articles-container container flex">
+        <div class="article">
+          <div class="article-header"></div>
+          <div class="article-content">
+            <h3 id="article-title">Назва статі</h3>
+            <p class="article-text">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              Voluptatum rerum maxime quaerat aut, tenetur voluptatem
+              consequuntur adipisci facere, veritatis, voluptatibus cupiditate
+              autem eos! At praesentium dolor, sint atque temporibus reiciendis
+              architecto deserunt officia obcaecati, autem, ea voluptate facilis
+              impedit. Harum exercitationem nobis nostrum laborum sequi delectus
+              repudiandae quam, sapiente cupiditate.
+            </p>
+          </div>
+        </div>
+        <div class="article">
+          <div class="article-header"></div>
+          <div class="article-content">
+            <h3 id="article-title">Назва статті</h3>
+            <p class="article-text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam
+              expedita beatae quae odio dicta nisi, at optio similique minus
+              illum ab voluptate quia quisquam itaque. Possimus ea omnis non aut
+              id ipsa tempora neque aliquam ab esse facere numquam enim aliquid
+              porro repellendus quaerat praesentium qui, quidem unde reiciendis
+              ullam.
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <nav class="footer-navbar">
+        <li><a href="/index.html">Головна</a></li>
+        <li><a href="/pages/login.html">Логін</a></li>
+        <li><a href="/pages/about.html">Про нас</a></li>
+      </nav>
+      <div class="logo">
+        <a href="/index.html"
+          ><img
+            class="footer-logo"
+            src="/img's/dark-theme/web-news-logo(white).png"
+        /></a>
+      </div>
+      <div class="social">
+        <a href="https://github.com/MrHogun/news-site.git" target="_blank"
+          ><img
+            src="/img's/dark-theme/github-icon(white).png"
+            alt="github-icon"
+        /></a>
+        <a href="https://t.me/mrhogun" target="_blank"
+          ><img src="/img's/dark-theme/telegram-icon(white).png"
+        /></a>
+      </div>
+      <p class="authors">Savchenko, Halkevych 2024y.</p>
+    </footer>
+    <script src="/index.js"></script>
+  </body>
+</html>

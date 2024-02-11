@@ -1,4 +1,4 @@
-/*змінні для зміни тем */
+/* Змінні для зміни тем */
 :root {
   --main: rgb(13, 13, 13);
   --main-back: white;
@@ -9,6 +9,7 @@
   color-scheme: dark;
 }
 
+/* Стилі для світлого режиму */
 .light {
   --main: white;
   --main-back: rgb(0, 0, 0);
@@ -20,7 +21,7 @@
   color-scheme: light;
 }
 
-/* сброс базових стилів */
+/* Сброс базових стилів */
 * {
   margin: 0;
   padding: 0;
@@ -28,7 +29,7 @@
   font-family: 'Courier New', Courier, monospace;
 }
 
-/* верхній нав-бар */
+/* Верхній нав-бар */
 .header-menu {
   display: flex;
   align-items: center;
@@ -85,10 +86,11 @@ a.active {
     'Lucida Sans', Arial, sans-serif;
 }
 
-/*пошукова строка, кнопка логіна */
+/* Пошукова строка, кнопка логіна */
 .theme-container {
   margin-left: 30%;
 }
+
 .search-login-theme-container {
   display: flex;
   align-items: center;
@@ -135,6 +137,7 @@ a.active {
   margin-right: 15px;
   border: 0;
   background-color: var(--main);
+  cursor: pointer;
 }
 
 .theme-toggle button img {
@@ -145,9 +148,17 @@ a.active {
   transform: scale(1.2);
 }
 
-/* головне тіло, стилі карток з новинами */
+/* Головне тіло, стилі карток з новинами */
+
+html,
+body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
 
 main {
+  flex: 1;
   margin-left: 40px;
   margin-right: 40px;
   padding-block: 20px;
@@ -156,6 +167,9 @@ main {
 .title-container {
   margin-top: 20px;
   border-bottom: 0.15rem solid;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .page-header {
@@ -164,7 +178,26 @@ main {
   margin-bottom: 10px;
 }
 
-/* картки з новинами */
+.create-btn {
+  font-size: 20px;
+  margin-left: auto;
+  margin-bottom: 5px;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: var(--main-back);
+  background-color: var(--main-active);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.create-btn:hover {
+  background-color: var(--main-card-hover);
+  color: var(--main-back);
+  text-decoration: none;
+}
+
+/* Картки з новинами */
 .cards-container {
   display: flex;
   justify-content: space-between;
@@ -205,7 +238,47 @@ main {
   margin-block: 12px;
 }
 
-/* футер */
+/* Статі */
+.articles-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: start;
+  padding-top: 2rem;
+}
+
+.article {
+  width: 100%;
+  min-height: 100px;
+  box-shadow: 0 0 4px var(--main);
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: var(--main-active);
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.article-title {
+  margin: 10px;
+}
+
+.article-text {
+  margin-top: 10px;
+  text-align: justify;
+}
+
+.article:hover {
+  box-shadow: 1px 1px 8px var(--main-active);
+  background-color: var(--main-card-hover);
+  transform: translateY(-2px);
+}
+
+.article-content {
+  padding: 12px;
+}
+
+/* Футер */
 footer {
   width: 100%;
   height: auto;
@@ -213,6 +286,7 @@ footer {
   margin: 0 auto;
   text-align: center;
   padding: 20px;
+  margin-top: auto;
 }
 
 footer a {
@@ -231,7 +305,6 @@ footer nav a:hover {
 
 .logo {
   width: 100%;
-
   display: flex;
   justify-content: center;
 }
@@ -260,7 +333,7 @@ footer nav a:hover {
   color: var(--main-back);
 }
 
-/* cторінка реєстрації */
+/* Сторінка реєстрації */
 
 .reg-page {
   margin: 0;
@@ -351,4 +424,72 @@ footer nav a:hover {
   padding-top: 3%;
   padding-bottom: 3%;
   text-align: justify;
+}
+
+/* Стилі для форми */
+.form-container {
+  width: 30%;
+  max-width: 90%;
+  margin: 50px auto;
+}
+
+.article-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-input,
+.form-textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid var(--main-active);
+  border-radius: 4px;
+  font-size: 16px;
+  outline: none;
+}
+
+.form-textarea {
+  resize: vertical;
+}
+
+/* Стилі для кнопки */
+.button-success {
+  background-color: var(--main);
+  color: var(--main-back);
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 4px;
+}
+
+.button-success:hover {
+  background-color: var(--main-card-hover);
+}
+
+/* Додаткові стилі для лейблів */
+label {
+  margin-bottom: 5px;
+  font-size: 16px;
+  color: var(--main-back);
+}
+
+/* Стилі для інпутів та текстареїв при фокусі */
+.form-input:focus,
+.form-textarea:focus {
+  border-color: var(--main);
+  box-shadow: 0 0 5px var(--main);
+}
+
+/* Повідомлення про відсутність статей */
+.no-articles-message {
+  text-align: center;
+  margin-top: 50px;
+  color: var(--main-back);
+  font-size: 20px;
+  font-weight: bold;
+  background-color: var(--main-active);
+  padding: 10px;
+  border-radius: 5px;
 }

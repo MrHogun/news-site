@@ -1,0 +1,96 @@
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>News Main</title>
+  <link rel="stylesheet" type="text/css" href="/style.css" />
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+</head>
+<body>
+  <header>
+    <div class="header-menu">
+      <div>
+        <a href="/index.html"
+          ><img
+            class="header-logo"
+            src="/img's/dark-theme/web-news-logo(white).png"
+        /></a>
+      </div>
+      <nav class="navbar-menu">
+        <li><a href="/index.html">Головна</a></li>
+        <li><a href="/pages/world-news.html">Новини світу</a></li>
+        <li><a href="/pages/ukraine-news.html">Новини України</a></li>
+        <li><a href="/pages/article.html">Статті</a></li>
+      </nav>
+      <div class="search-login-theme-container">
+        <div class="search-container">
+          <input
+            type="search"
+            placeholder="Пошук новини..."
+            class="search-input"
+          />
+        </div>
+        <div class="login-container">
+          <a target="_blank" href="/pages/login.html">
+            <img
+              class="icon"
+              src="/img's/dark-theme/login-icon(white).png"
+              alt="login-icon"
+            />
+          </a>
+        </div>
+        <div class="theme-toggle">
+          <button id="themeToggle" class="theme-toggle">
+            <img class="icon" src="/img's/dark-theme/theme-icon(white).png" />
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class="form-container">
+    <form method="post" class="article-form">
+      <label for="article-title">Назва статті</label>
+      <input type="text" id="article-title" class="form-input" placeholder="Назва статті" />
+  
+      <label for="article-preview">Анонс статті</label>
+      <input type="text" id="article-preview" class="form-input" placeholder="Анонс статті" />
+  
+      <label for="article-text">Текст статті</label>
+      <textarea id="article-text" class="form-textarea" placeholder="Текст статті"></textarea>
+  
+      <label for="article-date">Дата</label>
+      <input type="date" id="article-date" class="form-input" />
+  
+      <label for="article-time">Час</label>
+      <input type="time" id="article-time" class="form-input" />
+  
+      <button class="btn button-success" type="submit">Додати статтю</button>
+    </form>
+  </div>
+    <footer>
+      <nav class="footer-navbar">
+        <li><a href="/index.html">Головна</a></li>
+        <li><a href="/pages/login.html">Логін</a></li>
+        <li><a href="/pages/about.html">Про нас</a></li>
+      </nav>
+      <div class="logo">
+        <a href="/index.html"
+          ><img
+            class="footer-logo"
+            src="/img's/dark-theme/web-news-logo(white).png"
+        /></a>
+      </div>
+      <div class="social">
+        <a href="https://github.com/MrHogun/news-site.git" target="_blank"
+          ><img
+            src="/img's/dark-theme/github-icon(white).png"
+            alt="github-icon"
+        /></a>
+        <a href="https://t.me/mrhogun" target="_blank"
+          ><img src="/img's/dark-theme/telegram-icon(white).png"
+        /></a>
+      </div>
+      <p class="authors">Savchenko, Halkevych 2024y.</p>
+    </footer>
+    <script src="/index.js"></script>
+  </body>
+</html>
