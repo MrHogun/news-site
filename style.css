@@ -17,7 +17,7 @@
   --header-text: rgb(23, 23, 23);
   --card-back: rgb(222, 222, 222);
   --main-card-hover: #ebebeb;
-  --log-back: rgb(233, 233, 233);
+  --log-back: rgb(206, 206, 206);
   color-scheme: light;
 }
 
@@ -209,7 +209,7 @@ main {
 
 .card {
   flex: 1 0 calc(33.333% - 20px);
-  min-height: 400px;
+  min-height: 100px;
   box-shadow: 0 0 4px var(--main);
   border-radius: 4px;
   cursor: pointer;
@@ -235,7 +235,21 @@ main {
 }
 
 .news-source {
-  margin-block: 12px;
+  margin-block: 10px;
+}
+
+.news-source a {
+  display: inline-block;
+  padding: 10px 15px;
+  background-color: var(--main);
+  color: var(--main-back);
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.news-source a:hover {
+  background-color: var(--log-back);
 }
 
 /* Статі */
